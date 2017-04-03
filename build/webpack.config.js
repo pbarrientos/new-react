@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var TARGET_DIR = path.resolve(__dirname, './../src/target');
-var APP_DIR = path.resolve(__dirname, './../src/client/app');
+var TARGET_DIR = path.resolve(__dirname, 'target');
+var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
     entry: APP_DIR + '/index.jsx',
@@ -10,12 +10,12 @@ var config = {
         path: TARGET_DIR,
         filename: 'bundle.js'
     },
-    module : {
-        loaders : [
+    module: {
+        loaders: [
             {
-                test : /\.jsx?/,
-                include : APP_DIR,
-                loader : 'babel-loader'
+                test: /\.jsx?/,
+                include: APP_DIR,
+                loader: 'babel-loader'
             }
         ]
     }
